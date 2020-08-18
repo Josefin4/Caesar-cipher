@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css"
+    integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <div class="jumbotron container text-center col-lg-5 col-lg-offset-5">
+
+        <h1> All Hail Caesar!</h1>
+
+        <form>
+            <label>Plaintext:</label>
+            <textarea name='plaintext'>Hello World</textarea>
+            <label>Number of shifts:</label>
+            <input type='number' name='shifts' value='3' min='1' max='26'>
+
+            <button onclick="encode()">Encode</button>
+            <button onclick="decode()">Decode</button>
+        </form>
+
+        <h3>Encode:</h3>
+        <div id='enc'></div>
+        <h3>Decode:</h3>
+        <div id='dec'></div>
+
+        <script src="index.js"></script>
+    </div>
+</body>
+
+</html>
