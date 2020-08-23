@@ -15,20 +15,18 @@
 
         <h1> All Hail Caesar!</h1>
 
-        <form>
-            <label>Plaintext:</label>
-            <textarea name='plaintext'>Hello World</textarea>
+         <form>
+        <label for="userInput">Input: </label>
+        <input type="text" class="form-control" id="userInput">
             <label>Number of shifts:</label>
-            <input type='number' name='shifts' value='3' min='1' max='26'>
+            <input type='number' class="form-control" name='shifts' value='3' min='1' max='26'>
 
-            <button onclick="encode()">Encode</button>
-            <button onclick="decode()">Decode</button>
+            <button class="button 1" id="enco">Encode</button>
+            <button class="button 2" id ="deco">Decode</button>
+     
         </form>
+            <p id="output"></p>
 
-        <h3>Encode:</h3>
-        <div id='enc'></div>
-        <h3>Decode:</h3>
-        <div id='dec'></div>
 
         <script src="index.js"></script>
     </div>
