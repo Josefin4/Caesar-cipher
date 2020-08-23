@@ -7,15 +7,19 @@ const alphabet = [
 ];
 
 const form = document.forms[0];
-const enc = document.getElementById('enc');
-const dec = document.getElementById('dec');
-
-form.addEventListener('submit', event => {
+const output = document.getElementById("output")
+const enco = document.getElementById('enco');
+enco.addEventListener('click', (event) => {
     event.preventDefault();
-    enc.innerHTML = [...form.plaintext.value].map(char => encode(char)).join('');
-    dec.innerHTML = [...form.plaintext.value].map(char => decode(char)).join('');
-}
-);
+    output.innerHTML = [...form.userInput.value].map(char => encode(char)).join('');
+}); 
+
+const deco = document.getElementById('deco');
+deco.addEventListener('click', (event) => {
+    event.preventDefault();
+    output.innerHTML = [...form.userInput.value].map(char => decode(char)).join('');
+}); 
+
 
 
 function encode(char) {
